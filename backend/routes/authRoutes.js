@@ -11,14 +11,9 @@ import nodemailer from 'nodemailer';
 import { v4 as uuidv4 } from 'uuid';
 import cron from 'node-cron'
 
-
-
-
-
-
-
 import { config } from 'dotenv';
 config();  
+
 
 const { JWT_SECRET, EMAIL_USER, EMAIL_PASS, OPENAI_API_KEY } = process.env;
 
@@ -26,6 +21,7 @@ const { JWT_SECRET, EMAIL_USER, EMAIL_PASS, OPENAI_API_KEY } = process.env;
 
 
 const router = express.Router();
+const cronJobs = {};
 
 
 
