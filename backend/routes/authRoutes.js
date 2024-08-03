@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import { addUser } from '../models/formModel.js'; // Adjust path as necessary
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { JWT_SECRET,  EMAIL_USER, EMAIL_PASS, newAi } from '../config.js';
+
 import multer from 'multer';
 import { authenticateToken } from '../routes/authenticateToken.js'
 import OpenAI from 'openai';
@@ -11,9 +11,16 @@ import nodemailer from 'nodemailer';
 import { v4 as uuidv4 } from 'uuid';
 import cron from 'node-cron'
 
+import 'dotenv/config'; 
+import { config } from 'dotenv';
+config();  // Load environment variables from .env file
+
+const { JWT_SECRET, EMAIL_USER, EMAIL_PASS, newAi } = process.env;
+
+
 
 const router = express.Router();
-const cronJobs = {}; // In-memory storage for cron jobs
+
 
 
 
@@ -111,7 +118,7 @@ router.get('/profile', authenticateToken, async (req, res) => {
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 const openai = new OpenAI({
-    apiKey: newAi, // Replace with your actual API key
+    apiKey: `${newAi}`, 
 });
 // utils/parseNoteCards.js
 function parseNoteCards(noteCardsText, classTitle) {
