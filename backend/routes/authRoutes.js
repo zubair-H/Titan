@@ -11,19 +11,16 @@ import nodemailer from 'nodemailer';
 import { v4 as uuidv4 } from 'uuid';
 import cron from 'node-cron'
 
-import 'dotenv/config'; 
+
+
+
+
+
+
 import { config } from 'dotenv';
-config(); 
+config();  
 
-const { JWT_SECRET, EMAIL_USER, EMAIL_PASS, newAi } = process.env;
-
-
-
-import 'dotenv/config'; 
-import { config } from 'dotenv';
-config(); 
-
-const { JWT_SECRET, EMAIL_USER, EMAIL_PASS, newAi } = process.env;
+const { JWT_SECRET, EMAIL_USER, EMAIL_PASS, OPENAI_API_KEY } = process.env;
 
 
 
@@ -127,7 +124,7 @@ router.get('/profile', authenticateToken, async (req, res) => {
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 const openai = new OpenAI({
-    apiKey: `${newAi}`, 
+    apiKey: `${OPENAI_API_KEY}`, 
 });
 // utils/parseNoteCards.js
 function parseNoteCards(noteCardsText, classTitle) {

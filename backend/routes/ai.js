@@ -1,7 +1,11 @@
 // pdfExtract.js
 
 import axios from 'axios';
-import { AI } from '../config';
+import { config } from 'dotenv';
+config();  
+
+const {AI} = process.env;
+
 
 // Function to extract PDF text using OpenAI's API
 export  async function extractPdfText(user) {
