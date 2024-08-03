@@ -4,14 +4,6 @@
         {
             "src": "backend/server.js",
             "use": "@vercel/node"
-        },
-        {
-            "src": "backend/models/**/*.js",
-            "use": "@vercel/node"
-        },
-        {
-            "src": "backend/routes/**/*.js",
-            "use": "@vercel/node"
         }
     ],
     "routes": [
