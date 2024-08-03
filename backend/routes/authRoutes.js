@@ -3,14 +3,11 @@ import mongoose from 'mongoose';
 import { addUser } from '../models/formModel.js'; // Adjust path as necessary
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { JWT_SECRET } from '../config.js';
+import { JWT_SECRET,  EMAIL_USER, EMAIL_PASS, newAi } from '../config.js';
 import multer from 'multer';
 import { authenticateToken } from '../routes/authenticateToken.js'
-import { newAi } from '../config.js';
 import OpenAI from 'openai';
 import nodemailer from 'nodemailer';
-import { EMAIL_USER } from '../config.js'
-import { EMAIL_PASS } from '../config.js'
 import { v4 as uuidv4 } from 'uuid';
 import cron from 'node-cron'
 
