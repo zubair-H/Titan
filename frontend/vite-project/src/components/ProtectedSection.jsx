@@ -29,6 +29,7 @@ export default function ProtectedSection() {
                     setExtractedInfo(response.data.extractedInfo);
                 }
             } catch (error) {
+              
                 console.error('Error fetching user profile:', error.message);
             }
         };

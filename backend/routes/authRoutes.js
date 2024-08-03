@@ -790,7 +790,10 @@ router.delete('/remove-reminder', async (req, res) => {
 
 
 
-
+router.get('/protected', authenticateToken, (req, res) => {
+    alert('yugyhvyguitiyigygiybiygigy')
+    res.status(200).json({ message: 'This is a protected route', user: req.user });
+});
 
 
 

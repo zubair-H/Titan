@@ -4,6 +4,7 @@ import { Navigate } from 'react-router-dom';
 
 const ProtectedRoute = ({ element: Component, ...rest }) => {
     const token = localStorage.getItem('authToken');
+    alert(token)
     console.log(token)
     return token ? <Component {...rest} /> : <Navigate to="/login" />;
 };
