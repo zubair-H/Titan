@@ -1,6 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import { addUser } from '../models/formModel.js'; // Adjust path as necessary
+import { addUser } from '../models/formModel.js'; 
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
