@@ -44,7 +44,7 @@ export default function ScheduleEvents() {
                     return;
                 }
 
-                const response = await axios.get('http://localhost:8001/profile', {
+                const response = await axios.get('https://titan-server-blush.vercel.app/profile', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -96,7 +96,7 @@ export default function ScheduleEvents() {
                 allDay
             };
 
-            const response = await axios.post('http://localhost:8001/add-event', event, {
+            const response = await axios.post('https://titan-server-blush.vercel.app/add-event', event, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -157,7 +157,7 @@ export default function ScheduleEvents() {
                 return;
             }
 
-            await axios.put('http://localhost:8001/update-event', updatedEvent, {
+            await axios.put('https://titan-server-blush.vercel.app/update-event', updatedEvent, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -220,7 +220,7 @@ export default function ScheduleEvents() {
                 allDay
             };
 
-            const response = await axios.put('http://localhost:8001/edit-event', updatedEvent, {
+            const response = await axios.put('https://titan-server-blush.vercel.app/edit-event', updatedEvent, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -264,7 +264,7 @@ export default function ScheduleEvents() {
                 return;
             }
 
-            await axios.delete('http://localhost:8001/delete-event', {
+            await axios.delete('https://titan-server-blush.vercel.app/delete-event', {
                 data: { id: selectedEvent.id },
                 headers: {
                     Authorization: `Bearer ${token}`

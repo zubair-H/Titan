@@ -23,7 +23,7 @@ export default function AddSendTasks() {
                 period: period
             };
 
-            await axios.post('http://localhost:8001/send-email', requestData, {
+            await axios.post('https://titan-server-blush.vercel.app/send-email', requestData, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -57,7 +57,7 @@ export default function AddSendTasks() {
     const fetchTasks = async () => {
         const token = localStorage.getItem('authToken');
         try {
-            const response = await axios.get('http://localhost:8001/get-tasks', {
+            const response = await axios.get('https://titan-server-blush.vercel.app/get-tasks', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

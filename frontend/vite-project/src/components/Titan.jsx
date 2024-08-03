@@ -30,7 +30,7 @@ export default function Titan() {
           navigate('/login');
         }
 
-        await axios.get('http://localhost:8001/profile', {
+        await axios.get('https://titan-server-blush.vercel.app/profile', {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -79,7 +79,7 @@ export default function Titan() {
     }
 
     try {
-      const response = await axios.post('http://localhost:8001/upload', {
+      const response = await axios.post('https://titan-server-blush.vercel.app/upload', {
         title,
         studyGuide: additionalInput,
         numberOfQuestions

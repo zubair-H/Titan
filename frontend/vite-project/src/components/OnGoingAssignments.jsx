@@ -14,7 +14,7 @@ export default function OnGoingAssignments() {
                     return;
                 }
 
-                const response = await axios.get('http://localhost:8001/profile', {
+                const response = await axios.get('https://titan-server-blush.vercel.app/profile', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }

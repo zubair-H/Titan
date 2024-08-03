@@ -16,7 +16,7 @@ const Login = () => {
 
         try {
             const userData = { email, password };
-            const response = await axios.post('http://localhost:8001/login', userData);
+            const response = await axios.post('https://titan-server-blush.vercel.app/login', userData);
 
             const { token } = response.data;
             localStorage.setItem('authToken', token);

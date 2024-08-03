@@ -37,7 +37,7 @@ export default function ClassSchedule() {
                     return;
                 }
 
-                const response = await axios.get('http://localhost:8001/profile', {
+                const response = await axios.get('https://titan-server-blush.vercel.app//profile', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -138,7 +138,7 @@ export default function ClassSchedule() {
                 uniqueID: selectedEvent.extendedProps.uniqueID
             };
 
-            axios.post('http://localhost:8001/edit-event', payload, {
+            axios.post('https://titan-server-blush.vercel.app/edit-event', payload, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('authToken')}`
                 }
@@ -157,7 +157,7 @@ export default function ClassSchedule() {
 
             showEditForm();
 
-            axios.post('http://localhost:8001/edit-event', { uniqueID }, {
+            axios.post('https://titan-server-blush.vercel.app/edit-event', { uniqueID }, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('authToken')}`
                 }
