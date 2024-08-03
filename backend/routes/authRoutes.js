@@ -13,7 +13,7 @@ import cron from 'node-cron'
 
 import 'dotenv/config'; 
 import { config } from 'dotenv';
-config();  // Load environment variables from .env file
+config(); 
 
 const { JWT_SECRET, EMAIL_USER, EMAIL_PASS, newAi } = process.env;
 
