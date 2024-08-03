@@ -1,0 +1,35 @@
+/* Basic styles for the calendar container */
+@keyframes popSide {
+    from {
+        transform: translateY(-50%);
+
+    }
+
+    to {
+        transform: translateY(0%);
+
+    }
+}
+
+
+.todayDivOuter {
+    animation: popSide 0.4s ease-out forwards;
+    width: 98%;
+  
+}
+
+.todayDivOuter a {
+    border: 10px;
+    color: #ffffff;
+}
+
+.fc {
+    color: rgb(152, 152, 152);
+  
+}
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+.outer {
+    background-color: rgb(33, 31, 31);
+   
+
+
+}
+
+.firstHalf {
+    height: 30%;
+}
+
+.firstHalf,
+.secondHalf {
+    display: flex;
+    border: red solid;
+}
+
+
+.secondHalf {
+    height: 60%;
+}
+
+.googleCalender {
+    border: wheat solid;
+    width: 75%;
+
+}
+
+
+.today {
+    border: wheat solid;
+    width: 25%;
+
+}
+
+.class {
+    border: wheat solid;
+    display: flex;
+
+}
+
+.onGoing {
+    border: wheat solid;
+    width: 55%;
+}
+
+.upcoming {
+    border: wheat solid;
+    width: 45%;
+}
+
+.classesCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: wheat solid;
+    border-radius: 20px;
+    width: 33%;
+
+}
+
+.layer{
+ 
+}

@@ -1,0 +1,51 @@
+.outerOnGoing {
+    margin-top: 25px;
+    border: rgb(64, 64, 64) solid 1px;
+    width: 70%;
+     margin-top: 25px;
+     border-radius: 10px;
+   
+    
+}
+
+
+.assignmentList {
+    border: rgb(64, 64, 64) solid 1px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+
+.liOnGoing {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    border-bottom: rgb(53, 53, 53) solid 1px;
+    background-color: black;
+    border-radius: 1px;
+    padding-top: 18px;
+    padding-left: 35px;
+}
+
+
+.todayTitle2 {
+    background-color: black;
+    font-size: 25px;
+}
+
+
+
+
+.outer p {
+    font-size: 18px;
+    margin-left: 20px;
+   
+}
+
+
+
+
+

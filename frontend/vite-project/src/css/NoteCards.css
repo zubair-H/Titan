@@ -1,0 +1,562 @@
+@keyframes popUp {
+    from {
+        transform: translateY(-50%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes dontShow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+.outerMost {
+    border: rgba(140, 140, 140, 0.38) solid 0.5px;
+    border-radius: 5px;
+    min-height: 100vh;
+
+    max-height: fit-content;
+    transition: transform 1.3s ease-in-out, max-height 0.5s ease-in-out;
+    font-weight: lighter;
+    animation: popUp 0.3s ease-out;
+
+
+}
+
+.titleCards {
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.note-cards-container {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: -4%;
+
+
+
+}
+
+.note-card-outer {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    margin-left: 5%;
+    margin-bottom: 50px;
+}
+
+.note-card {
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, max-height 0.5s ease-in-out;
+    min-width: 250px;
+    border: rgb(201, 201, 201) solid 0.5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(236, 236, 236);
+
+
+}
+
+.note-card p {
+
+    margin-top: -10px;
+    padding-top: 10px;
+}
+
+
+.note-card.active {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+
+
+
+
+
+}
+
+.note-card.focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+
+
+
+
+}
+
+
+.note-card:hover,
+.addNoteCardActive:hover {
+    transform: scale(1.1);
+    z-index: 1;
+
+
+
+}
+
+.note-card.expanded {
+    max-height: 500px;
+    overflow-y: scroll;
+
+}
+
+.slideshow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+
+.question-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    animation: popUp 0.3s;
+    width: 75%;
+    margin-bottom: 60px;
+    margin-top: 60px;
+
+
+
+}
+
+.show-answer-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.show-answer-btn:hover {
+    background-color: #0056b3;
+}
+
+.answer-container {
+    height: 140px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    margin-top: 10px;
+    resize: vertical;
+
+
+
+
+}
+
+.answer-container.show {
+    max-height: 1000px;
+    opacity: 1;
+
+
+}
+
+.answer-container.hide {
+    max-height: 0;
+    opacity: 0;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 200px;
+
+}
+
+.navigation-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin: 0 35px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navigation-buttons button:disabled {
+    background-color: #c0c0c0;
+    cursor: not-allowed;
+}
+
+.navigation-buttons button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.editBtnsOuter {
+    margin-top: -10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.editBtns {
+
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(250, 125, 125);
+    border: none;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+    background-color: black;
+
+
+
+}
+
+.editBtns2 {
+    margin-left: 10px;
+    cursor: pointer;
+
+
+}
+
+
+
+.editBtns:hover,
+.editBtns2:hover {
+    color: red;
+
+}
+
+.btnForNoteCards {
+    display: flex;
+    flex-direction: row-reverse;
+    resize: both;
+
+}
+
+.editing {
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgb(33, 31, 31);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 1;
+    color: white;
+    animation: show 0.5s;
+}
+
+.editing.show {
+    opacity: 1;
+}
+
+.editing input,
+.editing textarea {
+    border: 1px solid rgba(140, 140, 140, 0.595);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(33, 31, 31);
+    font-size: 14px;
+    color: white;
+}
+
+.editinTextArea {
+    height: 100px;
+    resize: none;
+}
+
+.editing button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.editing button:hover {
+    background-color: #0056b3;
+}
+
+.no-cards-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.no-cards-message {
+    text-align: center;
+    color: #888;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.no-note-card-btn-outer {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    width: 100%;
+}
+
+.no-cards-button {
+
+    padding: 10px;
+    border: none;
+    border: none;
+    border-radius: 24px;
+    background-color: #4285f4;
+    min-width: 10%;
+    cursor: pointer;
+    color: white;
+
+
+}
+
+.no-cards-button:hover {
+    background-color: #275cb0;
+}
+
+
+
+.additional-input {
+    color: white;
+}
+
+.addNoteCardActive {
+    margin-top: 25px;
+    margin-left: 20px;
+    padding: 10px;
+    max-width: 20px;
+    max-height: 20px;
+    text-align: center;
+    border: rgb(2, 107, 255) solid;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.addNoteCardActive:hover {
+    color: rgb(66, 65, 65);
+}
+
+.editBtns3 {
+    font-size: 30px;
+    color: rgb(250, 125, 125);
+    margin-top: -12px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.editBtns3:hover {
+    color: red;
+}
+
+
+
+@media (max-width: 982px) {
+    .note-card {
+
+        cursor: pointer;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        margin: 8px;
+        padding: 12px;
+        font-size: small;
+        color: black;
+        text-align: center;
+        transition: transform 0.3s ease-in-out, max-height 0.5s ease-in-out;
+        min-width: 150px;
+        border: rgb(67, 67, 67) solid 0.5px;
+        background-color: rgb(1, 5, 34);
+        color: rgb(236, 236, 236);
+
+
+    }
+
+    .editBtns {
+
+        font-size: 25px;
+
+    }
+
+
+
+
+
+}
+
+@media (max-width: 768px) {
+
+
+
+    .titleCards {
+        font-size: 25px;
+
+    }
+
+    .note-card-outer {
+        margin: 0;
+        margin-top: 10%;
+
+    }
+
+    .note-card {
+
+        cursor: pointer;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+
+        margin: 8px;
+        padding: 12px;
+        font-size: small;
+        color: black;
+        text-align: center;
+        transition: transform 0.3s ease-in-out, max-height 0.5s ease-in-out;
+        min-width: 150px;
+        border: rgb(67, 67, 67) solid 0.5px;
+        background-color: rgb(1, 5, 34);
+        color: rgb(236, 236, 236);
+
+
+    }
+
+    .editBtns {
+        font-size: 23px;
+    }
+
+    .question-card {
+
+        width: 90%;
+        font-size: 15px;
+
+    }
+
+
+
+}
+
+@media (max-width: 430px) {
+
+
+    .titleCards {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .note-card {
+
+        cursor: pointer;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        margin: 8px;
+        padding: 9px;
+        font-size: 11px;
+        transition: transform 0.3s ease-in-out, max-height 0.5s ease-in-out;
+        min-width: 80px;
+        border: rgb(67, 67, 67) solid 0.5px;
+        background-color: rgb(1, 5, 34);
+        color: rgb(236, 236, 236);
+
+
+
+    }
+
+
+    .note-card-outer {
+
+
+        gap: 0px;
+
+        padding: 0;
+
+
+
+
+    }
+
+    .note-cards-container {
+        width: 90%;
+        margin: 0;
+        margin-left: 7%;
+
+
+    }
+
+    .addNoteCardActive {
+        margin-top: 25px;
+        padding: 1px 5px 1px 5px;
+        font-size: 13px;
+
+    }
+
+    .question-card {
+
+        width: 80%;
+
+
+    }
+
+
+    .editBtns {
+        font-size: 12px;
+        margin-top: -7px;
+        margin-left: 87%;
+    }
+
+
+    /* Add this to your CSS file, e.g., NewCalendar.css */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Semi-transparent black */
+        z-index: 1000;
+        /* Make sure it's on top of everything */
+        pointer-events: auto;
+        /* Allow interaction with elements inside the overlay */
+        display: none;
+        /* Hidden by default */
+
+
+
+    }
+}

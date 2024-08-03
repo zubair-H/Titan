@@ -1,0 +1,527 @@
+/* Keyframes for pop-up animation */
+@keyframes popUp {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+
+
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes showForms {
+    from {
+
+        opacity: 0;
+    }
+
+
+
+    to {
+
+        opacity: 1;
+    }
+}
+
+* {
+    outline: none;
+   
+}
+
+.fc {
+    height: 100vh;
+
+}
+
+.fc-event {
+  
+    color: white !important;
+
+}
+
+/* Basic styles for the calendar container */
+.newCalendarOuter {
+    width: 100.5%;
+    border-radius: 10px;
+    animation: popUp 0.3s ease-out;
+
+}
+
+.fc .fc-daygrid-day {
+    border:#0752a1 solid;
+    background-color: #070707e8;
+
+}
+
+.fc-daygrid-day:hover {
+    background-color: #5e95fa86;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.fc-event:hover {
+
+    transition: background-color 0.3s ease;
+    border: none;
+    background-color: rgb(223, 63, 63) !important;
+
+}
+
+.event-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(54, 54, 198);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    z-index: 1000;
+    opacity: 1;
+    animation: showForms 0.4s ease-in-out;
+
+
+
+}
+
+.description {
+    width: 96.5%;
+    height: 100px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(38, 38, 145);
+    border-radius: 10px;
+    overflow: scroll;
+
+}
+
+/* Event details heading */
+.event-details h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+/* Event details paragraph */
+.event-details p {
+    margin: 10px 0;
+}
+
+/* Event details buttons */
+.event-details button {
+    background-color: #120e54;
+    color: #d4d3d3;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.event-details button:focus {
+    outline: none;
+}
+
+/* Form container styling */
+.form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(16, 16, 90);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    z-index: 1000;
+    animation: showForms 0.4s ease-in-out;
+    color: #d4d3d3;
+    outline: none;
+}
+
+/* Form elements styling */
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-bottom: 10px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="date"],
+.form-container textarea,
+#userEmail,
+#reminderTime {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(16, 16, 30);
+    color: #ffffff;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: small;
+}
+
+.form-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Form buttons styling */
+.form-container button {
+    background-color: #4535d6;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.form-container button:hover {
+    background-color: #03092b;
+
+}
+
+.form-container button:focus {
+    outline: none;
+}
+
+/* Style for disabling page interaction */
+body.disabled {
+    pointer-events: none;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+:root {
+    --fc-border-color: #0752a1;
+  
+    --fc-today-bg-color: rgba(101, 252, 214, 0.161);
+   
+}
+
+
+
+.fc a {
+    font-size: 16px;
+    color: white;
+
+}
+
+
+
+
+
+.fc .fc-col-header-cell-cushion {
+    /* needs to be same precedence */
+    padding-top: 20px;
+    /* an override! */
+    padding-bottom: 25px;
+    /* an override! */
+
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+/* Center the date numbers in the month view */
+.fc-daygrid-day-number {
+    width: 100%;
+
+}
+
+/* Ensure the day cells are properly sized and centered */
+.fc-daygrid-day {
+
+    text-align: center;
+    padding: 0;
+}
+
+.fc .fc-today-button {
+    background-color: rgba(101, 252, 214, 0.161);
+
+}
+
+.addEventCancelOuter {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.addEventCancel {
+    padding: 0px 5px 5px 5px;
+    cursor: pointer;
+    font-size: 20px;
+
+}
+
+.addEventCancel:hover {
+    color: #022e65;
+}
+
+#addEventTitle {
+    border: none;
+   background-color: rgb(38, 38, 145);
+
+    border-bottom: rgba(255, 255, 255, 0.276) solid 0.5px;
+    border-radius: 5px;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+
+.addEventTextArea {
+    height: 70px;
+}
+
+
+.editButton {
+    font-size: 13px;
+    margin: 10px;
+    margin-top: 150px;
+}
+.editButton:hover {
+    background-color: #f14949;
+    color: white;
+}
+
+input {
+    cursor: pointer;
+}
+
+.detailedEventEditBtn {
+    border: red solid;
+    display: flex;
+
+}
+
+
+
+
+/* Add this to your CSS file, e.g., NewCalendar.css */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black */
+    z-index: 1000;
+    /* Make sure it's on top of everything */
+    pointer-events: auto;
+    /* Allow interaction with elements inside the overlay */
+    display: none;
+    /* Hidden by default */
+
+}
+
+.overlay.active {
+    display: block;
+    /* Show overlay when active */
+}
+
+
+
+
+.fc-theme-standard .fc-list-day-cushion {
+    background-color: #ff0000fe;
+    border: none;
+    font-weight: lighter;
+}
+
+
+.closeForm {
+    cursor: pointer;
+    font-size: 20px;
+    text-align: right;
+    margin-left: 97%;
+
+}
+
+.closeForm:hover {
+    color: #737373fe;
+    width: 200px;
+}
+
+.fc-button {
+    background-color:rgb(68, 62, 250)!important;
+
+    color: white;
+    /* White text */
+    border-radius: 4px !important;
+    padding: 10px !important;
+    border: none !important;
+    margin: 2px !important;
+}
+
+.fc-button:focus {
+    background-color: rgb(242, 107, 107) !important;
+}
+
+.fc-toolbar-title {
+    font-size: 20px !important;
+    ;
+    color: #ffffff;
+    font-weight: lighter !important;
+}
+
+.fc-button {
+    font-size: 12px !important;
+    padding: 10px 18px 10px 18px !important;
+    font-weight: lighter !important;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    #addEventTitle {
+        font-size: 15px !important;
+    }
+
+    #description {
+        font-size: 12px !important;
+
+    }
+
+    .form-container {
+
+        padding: 13px
+    }
+
+    .fc {
+
+        margin-top: 9vh;
+
+
+    }
+
+    .fc-button {
+        font-size: 12px !important;
+        padding: 10px 18px 10px 18px !important;
+
+    }
+
+
+
+
+    .event-details,
+    .form-container {
+
+        font-size: 14px;
+        width: 85%;
+    }
+
+    #addEventTitle {
+        font-size: 20px;
+    }
+
+    .outerDivNav {
+        position: relative;
+        /* Other existing styles */
+    }
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+@media only screen and (max-width: 690px) {
+
+
+    .form-container {
+
+
+        padding: 8px;
+        overflow: scroll;
+        max-height: 70vh;
+    }
+
+    .event-form {
+        font-size: 0px;
+    }
+
+    .fc-button {
+
+        font-size: 10px !important;
+        padding: 10px 13px 10px 13px !important;
+    }
+
+    .fc-toolbar-title {
+        font-size: 15px !important;
+
+    }
+
+
+    .fc {
+        height: 75vh;
+        overflow: scroll;
+    }
+
+    .fc-event {
+        padding: 0 !important;
+    }
+
+
+}
+
+@media only screen and (max-width: 530px) {
+    .fc-button {
+
+        font-size: 10px !important;
+        padding: 7px 10px 7px 10px !important;
+    }
+
+    .fc-toolbar-title {
+        font-size: 11px !important;
+        color: #ffffff;
+
+    }
+
+}
+
+@media only screen and (max-width: 445px) {
+    .fc-button {
+
+        font-size: 8px !important;
+        padding: 5px 9px 5px 9px !important;
+    }
+
+    .fc-toolbar-title {
+        font-size: 11px !important;
+        color: #ffffff;
+
+    }
+
+
+
+}

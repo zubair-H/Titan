@@ -1,0 +1,140 @@
+/* General Styles */
+
+.divAddTask {
+    display: flex;
+    flex-direction: column;
+    
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    max-width: 400px; /* Fit within a side nav */
+    margin: 0 auto; /* Center the form */
+    font-size: 12px;
+    border-top:rgb(141, 141, 141) solid 0.5px;
+   
+   padding-bottom: 12px;
+   border-bottom: rgb(141, 141, 141) solid 0.5px;
+   
+   
+}
+
+.taskPart1 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 4%;
+    margin-right: 4%;
+   
+  
+}
+
+.reminderTitle {
+    font-size: 1.5em;
+   
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: lighter;
+    
+}
+
+.emailInner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.emailRecp, #emailSubject, #emailMessage {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd56;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+    background-color: rgba(99, 99, 99, 0.04);
+   
+    
+}
+
+#emailMessage {
+    height: 100px;
+    resize: none;
+    margin-bottom: 20px;
+    padding-bottom: 115px;
+}
+
+.emailSchedule, .emailSend {
+   
+    background-color: #fe4747;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 13px;
+}
+
+.emailSend {
+    background-color: #0e9620;
+  
+}
+
+.emailSchedule:hover, .emailSend:hover {
+    background-color: rgb(236, 236, 236);
+    color: black;
+    border: black solid;
+}
+
+.scheduleDiv {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    
+}
+
+.scheduleDiv input, .scheduleDiv select, .scheduleDiv button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 13px;
+    
+}
+
+.scheduleDiv button {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.scheduleDiv button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .divAddTask {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .emailInner {
+        flex-direction: column;
+    }
+
+    .emailSchedule, .emailSend {
+        width: 100%;
+    }
+}

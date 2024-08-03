@@ -1,0 +1,169 @@
+.loginDiv {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  
+   
+   
+
+}
+
+.login-register-container {
+    width: 40%;
+    background-color: rgba(8, 0, 255, 0.352);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    max-width: 50%;
+    height: 75%;
+    
+    
+}
+
+.tab-header {
+    display: flex;
+    justify-content: center;
+    /* Align to top left */
+    gap: 20px;
+    /* Space between the tabs */
+    align-items: center;
+    /* Vertically align tabs */
+    margin-bottom: 20px;
+    text-align: center;
+   
+   
+
+
+
+}
+
+.tab {
+    
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    /* Consistent padding */
+    border-radius: 5px;
+    transition: padding 0.3s ease-in-out;
+  
+}
+
+.tab.active {
+    background-color: rgb(78, 78, 193);
+    color: white;
+    transition: padding 0.3s ease-in-out;
+}
+
+.innerLogin-register,
+.innerRegister {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  margin-top: 100px;
+  
+}
+
+.email {
+    margin-top: 20px;
+    color: lavender;
+}
+
+.login-register label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-align: center;
+    color: lavender;
+}
+
+.login-register input[type="email"],
+.login-register input[type="password"] {
+    width: calc(100% - 40px);
+    padding: 14px;
+  
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+.login-button-outer {
+    width: 100%;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.login-register button {
+    margin-top: 3vh;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(78, 78, 193);
+    color: lavender;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 50%;
+    
+
+}
+
+.login-register button:hover {
+    background-color: lavender;
+    color: rgb(0, 0, 0);
+    border: rgb(0, 0, 0) solid 1px;
+
+}
+
+
+@media only screen and (max-width: 777px) {
+    .login-register-container {
+        max-width: 60%;
+        width: 60%;
+       
+    }
+
+}
+
+
+@media only screen and (max-width: 640px) {
+    .login-register-container {
+        max-width: 60%;
+        width: 60%;
+      
+        font-size: medium;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 640px) {
+    .login-register-container {
+        max-width: 75%;
+        width: 75%;
+       
+        font-size: medium;
+    }
+
+    .innerLogin-register,
+    .innerRegister {
+      
+        font-size: small;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+}

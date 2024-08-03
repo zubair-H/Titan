@@ -1,0 +1,11 @@
+.section4 {
+    margin-top: 110px;
+    height: 565px;
+    border: wheat solid;
+    border-top: none;
+    border-top: #515151 solid;
+    display: flex;
+    justify-content: center;
+
+    border-radius: 20px;
+}

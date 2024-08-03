@@ -1,0 +1,384 @@
+@keyframes side2 {
+    from {
+        margin-left: -200px;
+    }
+
+    to {
+        margin-left: 0px;
+    }
+}
+
+
+@keyframes side {
+    from {
+        margin-left: 50px;
+    }
+
+    to {
+        margin-left: 0px;
+
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.75;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 0.25;
+    }
+}
+
+/* Transition for calendar div */
+.cal-transition {
+    animation: side2 0.4s;
+}
+
+/* When nav is hidden, shift the calendar div */
+.outerDivNav.nav-hidden .calenderDivOuter {
+    width: 100%;
+    animation: side 0.3s;
+}
+
+.outerDivNav {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    min-height: 100vh;
+    height: fit-content;
+    color: rgb(255, 255, 255);
+}
+
+/* Existing styles remain unchanged */
+
+.calenderDivOuter {
+    width: 80%;
+}
+
+.navbar {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(227, 227, 227);
+    transition: width 0.3s ease-in-out;
+    animation: side2 0.3s;
+    border: 1px solid #76767669;
+    border-left: none;
+    border-radius: 5px;
+    background-color: rgb(2, 20, 56);
+    padding-right: 10px;
+
+}
+
+.navContainer {
+    height: 100%;
+}
+
+
+
+p {
+    margin-left: 4%;
+}
+
+.active {
+
+    padding: 10px;
+    font-size: small;
+}
+
+.navContainer a:hover {
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.firstPart {
+    display: flex;
+    height: 50px;
+    border-radius: 10px;
+    border-bottom: rgba(255, 255, 255, 0.482) solid 0.5px;
+    margin-bottom: 50px;
+}
+
+.navOuter4 {
+    border-radius: 5px;
+    text-align: left;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border-bottom: rgba(255, 255, 255, 0.482) solid 0.5px;
+}
+
+.navOuter4 h2 {
+    padding: 8px;
+    font-weight: lighter;
+    margin-left: 2%;
+}
+
+.hamburgerButtonOuter {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.hamburgerButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 15px;
+    width: 13.3px;
+    padding: 0;
+
+}
+
+.hamburgerIcon {
+    margin-right: 20%;
+    width: 13px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+}
+
+.navOuter3 {
+    margin-top: -15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.titleTasks {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.navOuter3 a {
+    padding-left: 30px;
+    border-radius: 10px;
+}
+
+.navOuter2 p {
+    font-size: small;
+}
+
+.navOuter2 a {
+    margin-left: 7%;
+}
+
+.navOuter2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 18px;
+    height: 20%;
+}
+
+.operation2 {
+    font-size: 1px;
+}
+
+.highlight {
+    background-color: rgb(68, 62, 250);
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+
+}
+
+.hiddenBtn {
+    cursor: pointer;
+}
+
+.hiddenBtn:hover {
+    color: #414141;
+}
+
+.introMenu {
+    color: rgb(144, 140, 252);
+}
+
+.navContainerOuter {
+    display: flex;
+    position: sticky;
+    justify-content: center;
+    background-color: rgb(54, 58, 67);
+    height: max-content;
+}
+
+
+
+.navbarOuter {
+    position: sticky;
+    /* Fixed position */
+    top: 0;
+    left: 0.9%;
+    width: 96%;
+    z-index: 1000;
+    min-height: 100vh;
+}
+
+
+.hamburgerButtonOuter2 {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .outerDivNav {
+        flex-direction: column;
+    }
+
+    .navbarOuter {
+        width: 100%;
+    }
+
+    .calenderDivOuter {
+        width: 100%;
+    }
+
+    .navbar,
+    .hiddenBtn {
+        display: none;
+    }
+
+    .hamburgerButtonOuter2 {
+        display: flex;
+        font-size: 20;
+    }
+
+    .firstPart {
+        justify-content: space-between;
+    }
+
+    .hamburgerButton {
+        margin-left: 12px;
+        margin-top: 12px;
+
+    }
+
+    .horizontal-nav {
+        position: absolute;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 255, 0.086);
+       
+        width: 30%;
+        z-index: 1000;
+        height: 100vh;
+        margin-left: -1%;
+        margin-top: -1%;
+        animation: side2 0.3s;
+
+    }
+
+    .horizontal-nav a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    .navbar2 {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        background-color: rgb(0, 2, 16);
+        color: rgb(198, 197, 197);
+        transition: width 0.3s ease-in-out;
+        animation: side2 0.3s;
+        border: 1px solid #76767669;
+        border-left: none;
+
+        padding-right: 10px;
+    }
+
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        z-index: 6;
+        display: none;
+    }
+
+    #overlay.active {
+        display: block;
+    }
+
+
+
+
+}
+@media (max-width: 687px) {
+    .horizontal-nav {
+        width: 103%;
+    }
+
+}
+@media (max-width: 430px) {
+    .introMenu {
+        font-size: 18px;
+    }
+
+    .horizontal-nav {
+       
+        margin-left: -1.9%;
+        margin-top: -1.9%;
+    }
+
+
+
+
+}
+
+
+/* Keyframes for menu slide-out and fade-out effect */
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+
+.nav-animating2,
+.nav-animating {
+    animation: slideOut 0.3s forwards;
+}
+
+
+
+.bar.open:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.bar.open:nth-child(2) {
+    opacity: 0;
+}
+
+.bar.open:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.navbar {
+
+    background-color: rgba(0, 0, 0, 0.161);
+}
