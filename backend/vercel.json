@@ -1,5 +1,4 @@
 {
-  "version": 2,
   "rewrites": [
     {
       "source": "/assets/(.)",
@@ -8,22 +7,6 @@
     {
       "source": "/(.)",
       "destination": "/"
-    }
-  ],
-  "builds": [
-    {
-      "src": "/package.json",
-      "use": "@vercel/static-build"
-    },
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/server.js"
     }
   ]
 }
