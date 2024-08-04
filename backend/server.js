@@ -41,10 +41,10 @@ mongoose.connect(`${mongoDBURL}`)
     });
 
 // Mounting authRoutes
-//app.use('/', authRoutes);
-app.get('/testing-endpoint', (res, req) => {
-    res.json({ message: 'Backend is working!' });
-  });
+app.use('/', authRoutes);
+//app.get('/testing-endpoint', (res, req) => {
+  //  res.json({ message: 'Backend is working!' });
+  //});
 
 // Serve the React app for all frontend routes
 app.get('*', (req, res) => {
