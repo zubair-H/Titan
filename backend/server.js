@@ -20,7 +20,7 @@ const app = express();
 
 // Middleware
 app.use(cors(
-    
+
 ));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../frontend/vite-project/dist')));
@@ -41,7 +41,10 @@ mongoose.connect(`${mongoDBURL}`)
     });
 
 // Mounting authRoutes
-app.use('/', authRoutes);
+//app.use('/', authRoutes);
+app.get('/testing-endpoint', (res, req) => {
+    res.json({ message: 'Backend is working!' });
+  });
 
 // Serve the React app for all frontend routes
 app.get('*', (req, res) => {
