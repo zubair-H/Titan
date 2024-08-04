@@ -793,6 +793,11 @@ router.get('/protected', authenticateToken, (req, res) => {
 
 
 
+router.get('/testing-endpoint', (res, req) => {
+    res.json({ message: 'Backend is working!' });
+  });
+  
+
 
 
 
