@@ -19,7 +19,9 @@ const __dirname = dirname(__filename);
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors(
+    
+));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../frontend/vite-project/dist')));
 

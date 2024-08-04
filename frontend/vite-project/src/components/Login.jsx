@@ -11,12 +11,15 @@ const Login = () => {
     const [isLogin, setIsLogin] = useState(true); // State to toggle between login and register
     const navigate = useNavigate();
 
+
+    
+
     const handleSaveUser = async (event) => {
         event.preventDefault();
 
         try {
             const userData = { email, password };
-            const response = await axios.post('https://titan-server-blush.vercel.app/login', userData);
+            const response = await axios.post('https://titan-server-blush.vercel.app/api/login', userData);
 
             const { token } = response.data;
             localStorage.setItem('authToken', token);
