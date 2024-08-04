@@ -27,7 +27,7 @@ const cronJobs = {};
 
 
 // Register a user
-router.post('/register', async (req, res) => {
+router.post('/api/register', async (req, res) => {
     try {
         console.log('received data: ', req.body)
         const { name, userName, email, password, events } = req.body;
@@ -69,7 +69,7 @@ router.post('/register', async (req, res) => {
 });
 
 // login users
-router.post('/login', async (req, res) => {
+router.post('/api/login', async (req, res) => {
     try {
         const { email, password } = req.body;
 
@@ -98,7 +98,7 @@ router.post('/login', async (req, res) => {
 });
 
 // Protected route - fetch user profile
-router.get('/profile', authenticateToken, async (req, res) => {
+router.get('/api/profile', authenticateToken, async (req, res) => {
     try {
         const userId = req.user.id;
         const user = await addUser.findById(userId);
@@ -149,7 +149,7 @@ function parseNoteCards(noteCardsText, classTitle) {
         noteCardInfo: noteCards
     };
 }
-router.post('/upload', authenticateToken, async (req, res) => {
+router.post('/api/upload', authenticateToken, async (req, res) => {
     const { id: userId } = req.user;
     const { title, studyGuide, numberOfQuestions } = req.body;
     console.log(numberOfQuestions, '_____________________________________________________________________________________________________')
@@ -327,7 +327,7 @@ function generateRandomColor() {
     const color = themeColors[Math.floor(Math.random() * themeColors.length)];
     return color;
 }
-router.post('/add-event', async (req, res) => {
+router.post('/api/add-event', async (req, res) => {
     const { title, startTime, endTime, dateStart, dateEnd, description, reminderTime, reminderEmail } = req.body;
 
     if (!title || !startTime || !endTime || !dateStart || !dateEnd) {
@@ -396,7 +396,7 @@ router.post('/add-event', async (req, res) => {
     }
 });
 
-router.delete('/delete-event', async (req, res) => {
+router.delete('/api/delete-event', async (req, res) => {
     console.log('deleting an event')
 
 
@@ -449,7 +449,7 @@ router.delete('/delete-event', async (req, res) => {
 });
 
 
-router.put('/edit-event/:id', async (req, res) => {
+router.put('/api/edit-event/:id', async (req, res) => {
     const { id } = req.params;
     const { title, startTime, endTime, dateStart, dateEnd, description, reminderTime, reminderEmail } = req.body;
 
@@ -511,7 +511,7 @@ router.put('/edit-event/:id', async (req, res) => {
     }
 });
 
-router.put('/update-event', async (req, res) => {
+router.put('/api/update-event', async (req, res) => {
     console.log('Handling event update request');
     const { id, title, description, start, end, reminderTime, reminderEmail } = req.body;
 
@@ -580,7 +580,7 @@ router.put('/update-event', async (req, res) => {
 
 
 
-router.get('/events', authenticateToken, async (req, res) => {
+router.get('/api/events', authenticateToken, async (req, res) => {
     try {
         const userId = req.user.id; // Assuming you have user info in the token
         const user = await addUser.findById(userId);
@@ -594,7 +594,7 @@ router.get('/events', authenticateToken, async (req, res) => {
 });
 
 
-router.delete('/delete-noteCard', async (req, res) => {
+router.delete('/api/delete-noteCard', async (req, res) => {
     const authHeader = req.headers.authorization;
     const { uniqueID } = req.query;
 
@@ -631,7 +631,7 @@ router.delete('/delete-noteCard', async (req, res) => {
 });
 
 
-router.delete('/delete-noteCard-question', async (req, res) => {
+router.delete('/api/delete-noteCard-question', async (req, res) => {
     const authHeader = req.headers.authorization;
     const { noteCardUnique, questionId } = req.query;
 
@@ -686,7 +686,7 @@ router.delete('/delete-noteCard-question', async (req, res) => {
 
 
 
-router.patch('/edit-noteCard-question', async (req, res) => {
+router.patch('/api/edit-noteCard-question', async (req, res) => {
     const authHeader = req.headers.authorization;
     const { noteCardUnique, questionId, q1, a1 } = req.body;
 
@@ -738,7 +738,7 @@ router.patch('/edit-noteCard-question', async (req, res) => {
 
 
 
-router.delete('/remove-reminder', async (req, res) => {
+router.delete('/api/remove-reminder', async (req, res) => {
     const authHeader = req.headers.authorization;
     const { eventID } = req.query; // Get eventID from query parameters
 
@@ -786,7 +786,7 @@ router.delete('/remove-reminder', async (req, res) => {
 
 
 
-router.get('/protected', authenticateToken, (req, res) => {
+router.get('/api/protected', authenticateToken, (req, res) => {
     alert('yugyhvyguitiyigygiybiygigy')
     res.status(200).json({ message: 'This is a protected route', user: req.user });
 });
