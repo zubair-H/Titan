@@ -11,6 +11,7 @@
             "use": "@vercel/static"
         }
     ],
+    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
     "routes": [
         {
             "src": "/(login|register|profile|protected",
