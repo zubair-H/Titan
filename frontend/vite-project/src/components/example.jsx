@@ -252,7 +252,7 @@ export default function NewCalendar() {
                 reminderEmail: userEmail,
             };
 
-            const response = await axios.put(`http://localhost:8001/edit-event/${selectedEvent.id}`, updatedEvent, {
+            const response = await axios.put(`https://titan-server-nine.vercel.app/edit-event/${selectedEvent.id}`, updatedEvent, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

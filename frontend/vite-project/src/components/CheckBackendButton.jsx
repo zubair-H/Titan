@@ -6,7 +6,7 @@ const CheckBackendButton = () => {
 
   const checkBackend = async () => {
     try {
-      const response = await axios.get(`https://titan-server-blush.vercel.app/testing-endpoint`);
+      const response = await axios.get(`https://titan-server-nine.vercel.app/testing-endpoint`);
       setResponseMessage(response.data.message);
     } catch (error) {
       console.error('Error checking backend:', error);
