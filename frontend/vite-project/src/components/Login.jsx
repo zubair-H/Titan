@@ -24,7 +24,7 @@ const Login = () => {
             const { token } = response.data;
             localStorage.setItem('authToken', token);
             alert('sucessfully logged in!')
-            navigate('/home');
+            navigate('/protected');
         } catch (error) {
             console.error('Error logging in:', error.message);
             alert('Invalid email or password');

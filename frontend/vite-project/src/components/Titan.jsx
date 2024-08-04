@@ -30,12 +30,15 @@ export default function Titan() {
           navigate('/login');
         }
 
-        await axios.get('https://titan-server-blush.vercel.app/profile', {
+     
+     
+        await axios.get('https://titan-server-nine.vercel.app/profile', {
           headers: {
             Authorization: `Bearer ${token}`
           }
         });
       } catch (error) {
+      alert('its not workiing :/')
         console.error('Error fetching user profile:', error.message);
       }
     };
@@ -79,7 +82,7 @@ export default function Titan() {
     }
 
     try {
-      const response = await axios.post('https://titan-server-blush.vercel.app/upload', {
+      const response = await axios.post('https://titan-server-nine.vercel.app/upload', {
         title,
         studyGuide: additionalInput,
         numberOfQuestions
@@ -100,7 +103,7 @@ export default function Titan() {
 
 
     } catch (error) {
-      navigate('/login')
+     // navigate('/login')
       alert('Something Went Wrong')
       console.error('Error uploading data:', error.message);
       setError('Error uploading data');

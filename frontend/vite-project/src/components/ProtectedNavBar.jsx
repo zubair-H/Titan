@@ -30,7 +30,7 @@ export default function ProtectedNavBar() {
                     navigate('/login');
                     return;
                 }
-                const response = await axios.get('https://titan-server-blush.vercel.app/profile', {
+                const response = await axios.get('https://titan-server-nine.vercel.app/profile', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -78,7 +78,7 @@ export default function ProtectedNavBar() {
 
     const logout = () => {
         localStorage.removeItem('authToken');
-        navigate('/home');
+        navigate('/');
     };
 
     const hideNavBar = () => {
@@ -169,7 +169,7 @@ export default function ProtectedNavBar() {
                         </div>
                         <div className='navOuter2'>
                             <p className='operation2'>Other</p>
-                            <a className="active" onClick={() => { navigate('/home'); setMenuVisible(false); }}>Home</a>
+                            <a className="active" onClick={() => { navigate('/'); setMenuVisible(false); }}>Home</a>
                             <a className="active" onClick={() => { logout(); setMenuVisible(false); }}>Logout</a>
                             <a className="active" onClick={() => setMenuVisible(false)}>Contact</a>
                         </div>
@@ -220,7 +220,7 @@ export default function ProtectedNavBar() {
                                 </div>
                                 <div className='navOuter2'>
                                     <p className='operation2'>Other</p>
-                                    <a className="active" onClick={() => navigate('/home')}>Home</a>
+                                    <a className="active" onClick={() => navigate('/')}>Home</a>
                                     <a className="active" onClick={logout}>Logout</a>
                                     <a className="active">Contact</a>
                                 </div>

@@ -15,7 +15,7 @@ const ProtectedComponent = () => {
                     return;
                 }
 
-                const response = await axios.get('https://titan-server-blush.vercel.app/profile', {
+                const response = await axios.get('https://titan-server-nine.vercel.app/profile', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }

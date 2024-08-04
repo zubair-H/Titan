@@ -264,7 +264,7 @@ export default function ScheduleEvents() {
                 return;
             }
 
-            await axios.delete('https://titan-server-blush.vercel.app/delete-event', {
+            await axios.delete('https://titan-server-nine.vercel.app/delete-event', {
                 data: { id: selectedEvent.id },
                 headers: {
                     Authorization: `Bearer ${token}`

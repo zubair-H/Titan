@@ -25,7 +25,7 @@ export default function Register() {
 
         console.log('Sending user data:', userData);
 
-        axios.post('https://titan-server-blush.vercel.app/register', userData)
+        axios.post('https://titan-server-nine.vercel.app/register', userData)
             .then(() => {
                 alert('Account has been Created Successfully!')
                 navigate('/protected');

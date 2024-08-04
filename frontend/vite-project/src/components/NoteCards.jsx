@@ -19,7 +19,7 @@ export default function NoteCards() {
     const fetchNoteCards = async () => {
         try {
             const token = localStorage.getItem('authToken');
-            const response = await axios.get('https://titan-server-blush.vercel.app/profile', {
+            const response = await axios.get('https://titan-server-nine.vercel.app/profile', {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -54,7 +54,7 @@ export default function NoteCards() {
     const handleDeleteNoteCard = async (uniqueID) => {
         try {
             const token = localStorage.getItem('authToken');
-            await axios.delete(`https://titan-server-blush.vercel.app/delete-noteCard?uniqueID=${uniqueID}`, {
+            await axios.delete(`https://titan-server-nine.vercel.app/delete-noteCard?uniqueID=${uniqueID}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -90,7 +90,7 @@ export default function NoteCards() {
         try {
             const token = localStorage.getItem('authToken');
 
-            await axios.delete(`https://titan-server-blush.vercel.app/delete-noteCard-question?noteCardUnique=${noteCardUnique}&questionId=${questionId}`, {
+            await axios.delete(`https://titan-server-nine.vercel.app/delete-noteCard-question?noteCardUnique=${noteCardUnique}&questionId=${questionId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -139,7 +139,7 @@ export default function NoteCards() {
     const handleSaveEdit = async () => {
         try {
             const token = localStorage.getItem('authToken');
-            await axios.patch(`https://titan-server-blush.vercel.app/edit-noteCard-question`, {
+            await axios.patch(`https://titan-server-nine.vercel.app/edit-noteCard-question`, {
                 noteCardUnique: expandedCard.uniqueID,
                 questionId: editedQuestion._id,
                 q1: editedQuestion.q1,

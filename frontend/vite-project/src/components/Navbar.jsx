@@ -13,7 +13,7 @@ export default function Navbar() {
 
   const handleHomeButton = () => {
     console.log('this button is working');
-    navigate('/home');
+    navigate('/');
   }
 
   const move = async () => {
