@@ -1,7 +1,7 @@
 import { config } from 'dotenv';
-config();  
+config();
 
-const { PORT, mongoDBURL} = process.env;
+const { PORT, mongoDBURL } = process.env;
 
 
 
@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, '../frontend/vite-project/dist')));
 
 
 // Connecting to the database
-mongoose.connect(`mongodb+srv://zubair:hq6eT7T8AL-r6as@cluster0.jn9k9er.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
+mongoose.connect(`${mongoDBURL}`)
     .then(() => {
         // Start the server
         app.listen(PORT, () => {
