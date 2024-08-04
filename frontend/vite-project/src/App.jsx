@@ -21,8 +21,7 @@ function App() {
       </Helmet>
 
       <Routes>
-        <Route path='/' element={isLoggedIn ? <Navigate to='/protected' /> : <Navigate to='/home' />} />
-        <Route path='/home' element={<Home />} />
+        <Route path='/' element={<Home />} />
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login setIsLoggedIn={setIsLoggedIn} />} />
         <Route path='/protected' element={<ProtectedComponent />} />
