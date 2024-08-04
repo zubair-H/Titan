@@ -20,7 +20,7 @@ export default function Navbar() {
     try {
       const token = localStorage.getItem('authToken');
     
-        navigate('/login') ;
+        navigate('/login');
     
     } catch (error) {
       console.error(error);
