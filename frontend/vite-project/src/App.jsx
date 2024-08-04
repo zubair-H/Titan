@@ -27,7 +27,7 @@ function App() {
         <Route path='/protected' element={<ProtectedComponent />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
-    </div>
+    </div> 
   );
 }
 
