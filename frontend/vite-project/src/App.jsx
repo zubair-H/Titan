@@ -14,17 +14,15 @@ function App() {
     <div className="application">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Titan</title>
-        
-
- 
+        <title>Titan</title> 
       </Helmet>
+
 
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/register' element={<Register />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path='/protected' element={<ProtectedComponent />}/>
+        <Route path='/login' element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path='/protected' element={<ProtectedComponent />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div> 

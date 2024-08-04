@@ -19,11 +19,9 @@ export default function Navbar() {
   const move = async () => {
     try {
       const token = localStorage.getItem('authToken');
-      if (!token) {
+    
         navigate('/login');
-      } else {
-        navigate('/protected');
-      }
+    
     } catch (error) {
       console.error(error);
     }
