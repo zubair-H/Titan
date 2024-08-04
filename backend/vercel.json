@@ -1,7 +1,12 @@
 {
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ],
     "version": 2,
     "builds": [
-        
         {
             "src": "server.js",
             "use": "@vercel/node"
@@ -11,7 +16,6 @@
             "use": "@vercel/static"
         }
     ],
-    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
     "routes": [
         {
             "src": "/(login|register|profile|protected",
