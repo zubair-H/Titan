@@ -24,7 +24,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/register' element={<Register />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path='/protected' element={<ProtectedComponent />} />
+        <Route path='/protected' element={<ProtectedComponent />}/>
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div> 
