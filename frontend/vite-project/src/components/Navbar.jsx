@@ -8,7 +8,8 @@ export default function Navbar() {
 
   const handleRegButton = () => {
     console.log('this button is working');
-    navigate('/login');
+   // navigate('/login');
+   
   }
 
   const handleHomeButton = () => {
@@ -41,7 +42,7 @@ export default function Navbar() {
         <div className={`navOuter ${menuOpen ? 'menu-open' : ''}`}>
           <div className="nav">
             <Link className="active" to="/">Home</Link>
-            <a href="" onClick={move}>Login</a>
+            <Link to="/login" >Login</Link>
             <button className='register-btn' onClick={handleRegButton}>Register Now &rarr;</button>
           </div>
         </div>
