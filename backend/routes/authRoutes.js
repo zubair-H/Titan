@@ -120,7 +120,7 @@ router.get('/profile', authenticateToken, async (req, res) => {
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 const openai = new OpenAI({
-    apiKey: `${OPENAI_API_KEY}`,
+    apiKey: `${OPENAI_API_KEY}` ,
 });
 // utils/parseNoteCards.js
 function parseNoteCards(noteCardsText, classTitle) {
