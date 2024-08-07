@@ -39,7 +39,6 @@
     cursor: pointer;
     text-decoration: none;
     transition: transform 0.3s ease
-
 }
 
 .hamburger-btn {
@@ -90,15 +89,33 @@
 
 .nav a:hover,
 .titan-logo:hover {
-    transform: scale(1.02);
+    transform: scale(1.2);
 }
 
 .register-btn:hover {
-    transform: scale(1.02);
+    transform: scale(1.1);
 }
 
 .close-titan-logo {
     filter: blur(4px);
+}
+
+.login-button {
+    background-color: rgba(0, 0, 0, 0);
+    max-width: 22%;
+    font-size: 18px;
+    border: none;
+    color: white;
+    transition: transform 0.3s ease;
+    padding-left: 15px;
+    padding-right: 20px;
+
+}
+
+.login-button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+
 }
 
 @media (max-width: 768px) {
@@ -129,6 +146,13 @@
         transform: translateY(0);
 
     }
+
+    .login-button:hover {
+
+        text-decoration: underline;
+
+    }
+
 
     .menu-open a:hover {
         text-decoration: underline;

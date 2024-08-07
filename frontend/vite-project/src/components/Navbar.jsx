@@ -8,31 +8,41 @@ export default function Navbar() {
 
   const handleRegButton = () => {
     console.log('this button is working');
-   // navigate('/login');
-   
+    // navigate('/login');
+
   }
 
   const handleHomeButton = () => {
     console.log('this button is working');
-    navigate('/');
+    navigate('/login');
   }
 
-  const move = async () => {
+  const move = (async (e) => {
+
     try {
+
       const token = localStorage.getItem('authToken');
-    
-        navigate('/login') ;
-    
+      if (!token) {
+        navigate('/login')
+      }
+      else {
+        navigate('/protected')
+      }
+
+
+
     } catch (error) {
-      console.error(error);
+
+
     }
-  }
+  })
+
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   }
 
- 
+
 
 
   return (
@@ -42,8 +52,8 @@ export default function Navbar() {
         <div className={`navOuter ${menuOpen ? 'menu-open' : ''}`}>
           <div className="nav">
             <Link className="active" to="/">Home</Link>
-            <Link to="/login" >Login</Link>
-            <button className='register-btn' onClick={handleRegButton}>Register Now &rarr;</button>
+            <button className='login-button' onClick={move} >Login</button>
+            <button className='register-btn' onClick={move}>Register Now &rarr;</button>
           </div>
         </div>
         <div className='hamburger-btn' onClick={toggleMenu}>

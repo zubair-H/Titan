@@ -7,7 +7,7 @@
     border: none;
     width: 100%;
     animation: titleAnimation2 1.9s ease-out;
-    background-image: url('../assets/9.jpg');
+
     border-radius: 25px;
     margin-bottom: 10%;
 }
@@ -52,147 +52,94 @@
     margin-top: 10px;
 }
 
+
+
 .section3-row {
-    margin-top: 10vh;
+ 
     display: flex;
-    flex-wrap: wrap;
-    /* Allow wrapping on smaller screens */
-    align-items: flex-start;
-    /* Align items to the top */
-    justify-content: flex-start;
-    /* Align items to the start */
-    gap: 30px;
-    /* Space between paragraph and images */
+    flex-direction: row;
 }
 
 .section3-content {
-    flex: 1;
-    max-width: 50%;
-    max-height: 100%;
+    
+    max-width: 60%;
+    width: 50%;
+    height: 60%;
     background-color: rgb(91, 73, 230);
-    padding: 22px;
-   
     border-radius: 10px;
     margin-top: 7%;
     margin-left: 1%;
+  
+    margin-top: 20%;
 
 }
 
 .section3-content p {
-    font-size: 1rem;
-    /* Responsive font size */
+    font-size: 18px;
     line-height: 1.7;
     font-weight: 300;
-    max-height: 12vh;
+    max-height: 9vh;
     padding: 10px;
     overflow: scroll;
 }
 
 .section3-img-outer {
+    margin-top: 7%;
     display: flex;
-    flex-wrap: wrap;
-    /* Allow wrapping on smaller screens */
-    justify-content: flex-start;
-    /* Align images to the start */
+    flex-direction: row;
+    justify-content: right;
     width: 50%;
+  
     margin-bottom: 10%;
 }
 
 .section3-img {
-    margin: 10px;
-    /* Adjusted margin for smaller screens */
-    width: calc(50% - 20px);
-    /* Adjust width to fit two images per row */
-    height: auto;
-    border-radius: 15px;
-    /* Rounded corners for images */
+   
+    width: 80%;
   
+    border-radius: 15px;
+    margin-right: 2%;
     transition: transform 0.3s ease
-    /* Smooth hover effect */
 }
 
 .section3-img:hover {
     transform: scale(1.05);
-    /* Slight zoom effect on hover */
-    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.5);
-    /* Enhanced shadow on hover */
-}
-
-.section3-button {
-    display: inline-block;
-    padding: 15px 30px;
-    /* Adjusted padding for responsiveness */
-    font-size: 1rem;
-    /* Responsive font size */
-    background-color: rgb(89, 24, 111);
-    /* Matches the accent color from your title */
-    border: none;
-    border-radius: 10px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    /* Smooth hover effect */
-    text-align: center;
-    text-decoration: none;
-    margin-top: 20px;
-    /* Space above the button */
-}
-
-.section3-button:hover {
-    background-color: rgb(28, 7, 35);
-    /* Matches the accent color from your title */
-    transform: scale(1.05);
-    /* Slight zoom effect on hover */
-}
-
-/* Media Queries for responsiveness */
-
-@media (max-width: 1250px) {
-    .section3-content {
-        margin-top: 5%;
-    }
-
-.section3-content p {
-    font-size: 0.8rem;
-    /* Responsive font size */
-    line-height: 1.7;
-    font-weight: 300;
-    max-height: 12vh;
-    padding: 5px;
-    overflow: scroll;
 }
 
 
-}
 
-@media (max-width: 990px) {
-    .section3-content {
+
+@media (max-width: 850px) {
+    .section3-content p {
+        font-size: 15px;
        
-        margin-right: 1%;
-    
     }
     
-    .section3-title1 h2 {
-        font-size: 1.25rem;
-    }
+   
+}
 
-    .section3-title2 h3 {
-        font-size: 1.5rem;
+@media (max-width: 660px) {
+    .section3-content p {
+       
+        max-height: 6vh;
+        overflow: scroll;
     }
+    
+   
+}
 
-    .section3-content {
-        padding: 1rem;
-        max-width: 100%;
-        /* Full width on smaller screens */
+@media (max-width: 585px) {
+    .section3-content p {
+      
+       font-size: 12px;
+        max-height: 6vh;
+        overflow: scroll;
     }
 
     .section3-img-outer {
-        width: 100%;
-        /* Full width on smaller screens */
+        margin-top: 12%;
+        
     }
-
-    .section3-img {
-        width: calc(50% - 20px);
-        /* Two images per row on medium screens */
-    }
+    
+   
 }

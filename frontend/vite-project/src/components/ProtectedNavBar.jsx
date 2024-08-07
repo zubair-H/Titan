@@ -4,7 +4,6 @@ import '../css/ProtectedNavBar.css';
 import NewCalendar from './NewCalendar';
 import axios from 'axios';
 import Titan from './Titan';
-import Today from './Today';
 import NoteCards from './NoteCards';
 
 export default function ProtectedNavBar() {

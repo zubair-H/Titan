@@ -7,12 +7,12 @@ export default function Section2() {
     <div className='section2'>
       <div className='main-title-outer'>
         <h2 className='main-title'>Titan-Calendar</h2>
-        <h2 className='main-title2'>Is Built For You, The Power User</h2>
+        <h2 className='main-title2'>Stay on top, effortlessly</h2>
       </div>
 
       <div className='subtitle-outer'>
         <p className='subtitle'>
-          A calendar designed with a philosophy of simplicity, Allowing you to Effortlessly add, edit, and manage your events with intuitive drag-and-drop functionality.
+          A calendar designed, with a philosophy of simplicity, Allowing students to Effortlessly add, edit, and manage their events with intuitive drag-and-drop functionality.
         </p>
       </div>
 
@@ -26,10 +26,10 @@ export default function Section2() {
 
         <div className='text-container'>
           <h3 className='description-first'>
-            Handcrafted to meet your unique needs, it’s your time, beautifully organized.
+            Meticulously crafted to fit your individual needs, our calendar transforms your unique schedules and events into a beautifully organized experience.
           </h3>
         </div>
-        
+
       </div>
     </div>
   );

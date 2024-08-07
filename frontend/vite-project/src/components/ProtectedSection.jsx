@@ -73,11 +73,6 @@ export default function ProtectedSection() {
                 </div>
             </div>
         </>
-        /*
-        1. check attedance
-        2. prof email/office hours/ its location
-        3. late tokens/extra credit
-        4. curve yes or no
-        */
+      
     );
 }

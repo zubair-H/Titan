@@ -44,6 +44,7 @@ const Login = () => {
             </div>}
             <Navbar />
             <div className='loginDiv'>
+
                 <div className='login-register-container'>
                     <div className='tab-header'>
                         <h2
@@ -90,7 +91,20 @@ const Login = () => {
                                 <br />
                                 <div className='login-button-outer'>
                                     <button type="submit">Login</button>
+
                                 </div>
+                                <div className='demo'>
+                                    <h3>Demo Account</h3>
+                                    <p>
+                                        email: demoaccount@gmail.com
+
+                                    </p>
+                                    <p>  password: $#@234D</p>
+                                    <p> </p>
+
+                                </div>
+
+
                             </form>
                         ) : (
                             <Register></Register>

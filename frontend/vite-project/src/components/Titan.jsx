@@ -38,7 +38,7 @@ export default function Titan() {
           }
         });
       } catch (error) {
-        alert('its not workiing :/')
+      
         console.error('Error fetching user profile:', error.message);
       }
     };
@@ -93,7 +93,7 @@ export default function Titan() {
       });
 
 
-      alert('YOUR NOTE CARDS ARE READY, NAVIGATE TO THE NOTE CARDS TAB')
+      alert('Note Cards Ready—Go to Noe Cards Tab')
       setSuccessMessage(response.data.message);
       setShowButton(true);
       setTitle("");
@@ -164,6 +164,8 @@ export default function Titan() {
                   onChange={(e) => setNumberOfQuestions(e.target.value)}
                   onFocus={handleFocus}
                   onBlur={handleBlur}
+                  max="12"
+                  min= "1"
                 />
                 <button type='submit' className='submit'>Submit</button>
               </div>
