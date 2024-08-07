@@ -30,15 +30,15 @@ export default function Titan() {
           navigate('/login');
         }
 
-     
-     
+
+
         await axios.get('https://titan-server-nine.vercel.app/profile', {
           headers: {
             Authorization: `Bearer ${token}`
           }
         });
       } catch (error) {
-      alert('its not workiing :/')
+        alert('its not workiing :/')
         console.error('Error fetching user profile:', error.message);
       }
     };
@@ -103,7 +103,7 @@ export default function Titan() {
 
 
     } catch (error) {
-     // navigate('/login')
+      // navigate('/login')
       alert('Something Went Wrong')
       console.error('Error uploading data:', error.message);
       setError('Error uploading data');

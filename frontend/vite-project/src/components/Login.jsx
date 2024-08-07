@@ -8,37 +8,46 @@ import Register from './Register';
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [isLogin, setIsLogin] = useState(true); // State to toggle between login and register
+    const [isLogin, setIsLogin] = useState(true);
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
 
-    
+
+
 
     const handleSaveUser = async (event) => {
-        event.preventDefault();  
+        event.preventDefault();
+        setLoading(true)
 
         try {
             const userData = { email, password };
             const response = await axios.post('https://titan-server-nine.vercel.app/login', userData);
 
+
             const { token } = response.data;
             localStorage.setItem('authToken', token);
             alert('sucessfully logged in!')
             navigate('/protected');
+            setLoading(false)
         } catch (error) {
             console.error('Error logging in:', error.message);
+            setLoading(false)
             alert('Invalid email or password');
         }
     };
 
     return (
         <>
+            {loading && <div id="overlay2" className="loading-overlay active2">
+                <div className="loading-indicator2"></div>
+            </div>}
             <Navbar />
             <div className='loginDiv'>
                 <div className='login-register-container'>
-                    <div  className='tab-header'>
+                    <div className='tab-header'>
                         <h2
-                       
+
 
                             className={`tab ${isLogin ? 'active' : ''}`}
                             onClick={() => setIsLogin(true)}
@@ -59,7 +68,7 @@ const Login = () => {
                                 <h1 className='login'>LOGIN</h1>
                                 <label htmlFor="email" className='email'>Please Enter Your Email & Password</label>
                                 <input
-                                  
+
                                     placeholder='Email'
                                     type="email"
                                     id='email'
@@ -84,7 +93,7 @@ const Login = () => {
                                 </div>
                             </form>
                         ) : (
-                           <Register></Register>
+                            <Register></Register>
                         )}
                     </div>
                 </div>

@@ -71,7 +71,7 @@
 
 .note-card {
     cursor: pointer;
-    border: 2px solid #ccc;
+   
     border-radius: 8px;
     overflow: hidden;
     margin: 8px;
@@ -79,8 +79,8 @@
     text-align: center;
     transition: transform 0.3s ease-in-out, max-height 0.5s ease-in-out;
     min-width: 250px;
-    border: rgb(201, 201, 201) solid 0.5px;
-    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #cccccc65;
+    background-color: rgb(1, 5, 34);
     color: rgb(236, 236, 236);
 
 
@@ -239,7 +239,7 @@
     border: none;
     padding: 0px 5px 0px 5px;
     border-radius: 5px;
-    background-color: black;
+    background-color: rgb(1, 5, 34);
 
 
 
@@ -475,14 +475,14 @@
 
 
     .titleCards {
-        font-size: 20px;
+
         text-align: center;
     }
 
     .note-card {
 
         cursor: pointer;
-        border: 2px solid #ccc;
+        border: 1px solid #ccc;
         border-radius: 8px;
         margin: 8px;
         padding: 9px;
@@ -498,25 +498,9 @@
     }
 
 
-    .note-card-outer {
+    
 
-
-        gap: 0px;
-
-        padding: 0;
-
-
-
-
-    }
-
-    .note-cards-container {
-        width: 90%;
-        margin: 0;
-        margin-left: 7%;
-
-
-    }
+   
 
     .addNoteCardActive {
         margin-top: 25px;
@@ -535,8 +519,10 @@
 
     .editBtns {
         font-size: 12px;
-        margin-top: -7px;
-        margin-left: 87%;
+        margin-top: 5px;
+        text-align: right;
+        background-color: rgb(1, 5, 34);
+      
     }
 
 

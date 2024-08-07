@@ -548,13 +548,7 @@ export default function NewCalendar() {
                                 value={description}
                                 onChange={(e) => setDescription(e.target.value)}
                             />
-                            <input
-                                placeholder='Reminder Email'
-                                type="email"
-                                id="userEmail"
-                                value={userEmail}
-                                onChange={(e) => setUserEmail(e.target.value)}
-                            /> <br />
+                          
                             <div className='timeAndDate'>
                                 <label>
                                     Date Start:
@@ -600,13 +594,7 @@ export default function NewCalendar() {
                                 <div className="reminder-form">
 
 
-                                    <label htmlFor="reminderTime">Reminder Time:</label>
-                                    <input
-                                        type="datetime-local"
-                                        id="reminderTime"
-                                        value={reminderTime}
-                                        onChange={(e) => setReminderTime(e.target.value)}
-                                    />
+                                
                                 </div>
                                 {editingEvent && selectedEvent.reminderTime && (
                                     <div className="reminder-info">

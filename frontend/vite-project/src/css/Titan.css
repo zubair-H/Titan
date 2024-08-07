@@ -76,7 +76,7 @@
   outline: none;
   color: white;
   background-color: rgba(54, 54, 54, 0.229);
- 
+
 
 }
 
@@ -126,7 +126,7 @@
 
   border-radius: 0px 20px 20px 0px;
   font-size: 16px;
-  background-color:rgb(68, 62, 250);
+  background-color: rgb(68, 62, 250);
   border: none;
   color: white;
   cursor: pointer;
@@ -196,6 +196,7 @@
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  backdrop-filter: blur(5px);
 }
 
 .loading-indicator {
@@ -218,9 +219,22 @@
 }
 
 
+@media only screen and (max-width: 1200px) {
+
+  
+
+  .loading-indicator {
+    margin-left: 43%;
+    margin-top: 450px;
+
+  }
+
+}
+
+
 @media only screen and (max-width: 768px) {
   .titan-title {
-    font-size: 40px;
+    font-size: 20px;
 
   }
 
@@ -230,10 +244,16 @@
 
 @media only screen and (max-width: 430px) {
 
+  .titan-title {
+    font-size: 20px;
+
+  }
+
   .titan-input,
   .expanded,
   .titan-input2,
-  .additional-input-container, .additional-input {
+  .additional-input-container,
+  .additional-input {
     font-size: 12px;
 
   }
