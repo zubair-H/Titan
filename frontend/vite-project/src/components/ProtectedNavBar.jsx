@@ -202,13 +202,13 @@ export default function ProtectedNavBar() {
                                         className={`active ${activeLink === 'titan' ? 'highlight' : ''}`}
                                         onClick={() => handleLinkClick('titan')}
                                     >
-                                        &#10095; Meet Titan
+                                        &#10095; Meet Titan-Guide
                                     </a>
                                     <a
                                         className={`active ${activeLink === 'calendar' ? 'highlight' : ''}`}
                                         onClick={() => handleLinkClick('calendar')}
                                     >
-                                        &#x1F4C5; Calendar
+                                        &#x1F4C5; Titan-Calendar
                                     </a>
                                     <a
                                         className={`active ${activeLink === 'noteCard' ? 'highlight' : ''}`}
